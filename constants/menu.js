@@ -1,0 +1,8 @@
+export const MENU_OPTIONS = [
+	{ id: "0", name: "Introduction", url: "#intro" },
+	{ id: "1", name: "About Me", url: "#about" },
+	{ id: "2", name: "Personal Projects", url: "#project" },
+	{ id: "3", name: "Education", url: "#education" },
+	{ id: "4", name: "Certification", url: "#certification" },
+	{ id: "5", name: "Technologies", url: "#tech" }
+];
