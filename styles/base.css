@@ -1,0 +1,124 @@
+@tailwind base;
+
+@layer base {
+	:root {
+		color-scheme: light;
+		--page-width: 80rem;
+		--page-gutter: clamp(1rem, 4vw, 2.5rem);
+		--section-space: clamp(2.5rem, 5vw, 4rem);
+		--content-space: clamp(1.25rem, 2.5vw, 1.75rem);
+		--header-height: 69px;
+		--background: #f8fafc;
+		--surface: #ffffff;
+		--surface-subtle: #f1f5f9;
+		--surface-strong: #e3eaf2;
+		--border: #dce3ec;
+		--border-strong: #b8c6d6;
+		--text: #101828;
+		--text-muted: #475467;
+		--text-subtle: #667085;
+		--accent: #0f2949;
+		--accent-hover: #173e6b;
+		--accent-soft: #e7eef6;
+		--focus: #2d68a6;
+		--shadow-sm: 0 1px 3px rgb(15 23 42 / 4%), 0 8px 24px -20px rgb(15 41 73 / 18%);
+		--shadow-md: 0 12px 32px -24px rgb(15 41 73 / 28%);
+		--radius-sm: 0.625rem;
+		--radius-md: 0.75rem;
+		--radius-lg: 0.875rem;
+	}
+
+	.dark {
+		color-scheme: dark;
+		--background: #07111f;
+		--surface: #0d1a2a;
+		--surface-subtle: #132238;
+		--surface-strong: #1a2d47;
+		--border: #263850;
+		--border-strong: #3a5270;
+		--text: #f4f7fb;
+		--text-muted: #c3cfdd;
+		--text-subtle: #94a6ba;
+		--accent: #9fc5ed;
+		--accent-hover: #c2dcf7;
+		--accent-soft: #17304c;
+		--focus: #9fc5ed;
+		--shadow-sm: 0 1px 2px rgb(0 0 0 / 20%), 0 10px 30px -22px rgb(0 0 0 / 70%);
+		--shadow-md: 0 22px 55px -36px rgb(0 0 0 / 85%);
+	}
+
+	html {
+		overflow-x: clip;
+		scroll-behavior: smooth;
+		scroll-padding-top: calc(var(--header-height) + 12px);
+	}
+
+	body {
+		min-width: 320px;
+		margin: 0;
+		overflow-x: clip;
+		background: var(--background);
+		color: var(--text);
+		font-family: Inter, Geist, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+		font-size: 1rem;
+		line-height: 1.65;
+		-webkit-font-smoothing: antialiased;
+		text-rendering: optimizeLegibility;
+		transition: background-color 180ms ease, color 180ms ease;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4 {
+		color: var(--text);
+		font-weight: 750;
+		line-height: 1.2;
+		text-wrap: balance;
+	}
+
+	p {
+		text-wrap: pretty;
+	}
+
+	a,
+	button {
+		-webkit-tap-highlight-color: transparent;
+	}
+
+	button {
+		touch-action: manipulation;
+	}
+
+	button,
+	input,
+	textarea,
+	select {
+		font: inherit;
+	}
+
+	::selection {
+		background: #c8d9ec;
+		color: #081a30;
+	}
+
+	:focus-visible {
+		outline: 3px solid var(--focus);
+		outline-offset: 3px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		scroll-behavior: auto !important;
+		transition-duration: 0.01ms !important;
+	}
+}
